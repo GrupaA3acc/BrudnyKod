@@ -46,7 +46,9 @@ public class Zadanie3 {
         System.out.println(lista);
 
         lista.add(priceWithDiscount);
-        lista.add
+        lista.add(basePrice);
+        lista.add(discount);
+
     }
 
 
