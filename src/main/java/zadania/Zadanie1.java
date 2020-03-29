@@ -22,7 +22,7 @@ public class Zadanie1 {
         if(numer == 1) {
             int x = 0;
             int y = 0;
-            //szukanie punktów calkowitych w kole i dodawanie ich do tablicy
+
             while(x<= r)
             {
                 while(y<=r)
@@ -60,6 +60,37 @@ public class Zadanie1 {
                 System.out.println("Wpisano numer, dla którego nie przydzielono figury");
             System.out.println(V);
         }
+    }
+
+
+    public static boolean podzielnaPrzez6(int liczba)
+    {
+        boolean przez2 = false;
+        boolean przez3 = false;
+        if(liczba % 2 == 0)
+        {
+            przez2 = true;
+        }
+        if(liczba % 3 == 0)
+        {
+            przez3 = true;
+        }
+        return przez2 && przez3;
+    }
+
+    public static boolean podzielnaPrzez15(int liczba)
+    {
+        boolean przez3 = false;
+        boolean przez5 = false;
+        if(liczba % 3 == 0)
+        {
+            przez3 = true;
+        }
+        if(liczba % 5 == 0)
+        {
+            przez5 = true;
+        }
+        return przez3 && przez5;
     }
 
 }
