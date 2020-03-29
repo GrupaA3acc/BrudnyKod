@@ -1,11 +1,8 @@
 package zadania;
 
+
 public class Zadanie1 {
 
-
-    public static void main(String[] args) {
-        metoda1(2,1,1);
-    }
     //Jeśli figura jest kołem funkcja szuka punktów calkowite dla okregu (wewnatrz i na "brzegu")
 
     //1 - koło (płaska)
@@ -22,7 +19,7 @@ public class Zadanie1 {
         if(numer == 1) {
             int x = 0;
             int y = 0;
-
+            //szukanie punktów calkowitych w kole i dodawanie ich do tablicy
             while(x<= r)
             {
                 while(y<=r)
@@ -62,31 +59,37 @@ public class Zadanie1 {
         }
     }
 
-
-    public static boolean podzielnaPrzez6(int liczba)
+    public static boolean sumaPodzielnaPrzez6(int liczba1, int liczba2)
     {
         boolean przez2 = false;
         boolean przez3 = false;
-        if(liczba % 2 == 0)
+
+        int sum = liczba1 + liczba2;
+
+        if(sum % 2 == 0)
         {
             przez2 = true;
         }
-        if(liczba % 3 == 0)
+        if(sum % 3 == 0)
         {
             przez3 = true;
         }
+
         return przez2 && przez3;
     }
 
-    public static boolean podzielnaPrzez15(int liczba)
+    public static boolean IloczynPodzielnyPrzez15(int liczba1, int liczba2)
     {
         boolean przez3 = false;
         boolean przez5 = false;
-        if(liczba % 3 == 0)
+
+        int iloczyn = liczba1*liczba2;
+
+        if(iloczyn % 3 == 0)
         {
             przez3 = true;
         }
-        if(liczba % 5 == 0)
+        if(iloczyn % 5 == 0)
         {
             przez5 = true;
         }
@@ -94,3 +97,5 @@ public class Zadanie1 {
     }
 
 }
+
+
