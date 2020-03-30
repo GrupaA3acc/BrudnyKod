@@ -5,6 +5,28 @@ import java.util.List;
 
 public class Zadanie4 {
 
+    //metoda ktora liczy pola figur
+    //jesli jeden warunek to kwadratu
+    //jesli dwa warunki to prostokata
+    //jesli 3 warunki to trojkata
+    // jesli czyKolo = true liczy pole kola
+    //jesli wiecej to daje informacje ze dane nieprawidlowe
+    public void metoda(boolean czyKolo, double ... args){
+        czyKolo=true;
+        if(args.length == 1){
+            System.out.println("pole kwadratu: " + args[0]*args[0]);
+        }else if(args.length == 2){
+            System.out.println("pole porostokata: " + args[0]*args[1]);
+        }else if(args.length == 3){
+            double polowaObwodu = (args[0]+args[1]+args[2])/2;
+            System.out.println("pole trojkata: " + Math.sqrt(polowaObwodu*(polowaObwodu-args[0])*(polowaObwodu-args[1])*(polowaObwodu-args[2])));
+        }else if(czyKolo){
+            System.out.println("pole kola: " + Math.PI*Math.pow(2,args[0]));
+        }else {
+            System.out.println("dane niepoprawne");
+        }
+    }
+
     public void wyswietlMacierzTransponowana(int[][] array){
         //wyswietla macierz przed transponowaniem
         for (int i = 0; i < array.length; i++) {
